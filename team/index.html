@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet our team at is-cod.in - A free subdomain service">
+    <meta name="keywords" content="subdomain, free subdomain, is-cod.in">
+    <meta name="author" content="is-cod.in">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="is-cod.in - Free Subdomain Service">
+    <meta property="og:description" content="Meet our team at is-cod.in - A free subdomain service!">
+    <meta property="og:image" content="https://is-cod.in/assets/logo.png">
+    <meta property="og:url" content="https://is-cod.in">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="is-cod.in - Free Subdomain Service">
+    <meta name="twitter:description" content="Meet our team at is-cod.in - A free subdomain service!">
+    <meta name="twitter:image" content="https://is-cod.in/assets/logo.png">
+
+    <title>is-cod.in - Free Subdomain Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Add your styles here -->
+</head>
+
+    <style>
+        /* General styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Silkscreen', cursive; 
+            background-color: #1a1a1a;
+            color: #eaeaea;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px; 
+        }
+
+        /* Container styling for spacing */
+        .team-container {
+            display: flex;
+            flex-direction: column; /* Change to column for main container */
+            align-items: center;
+            gap: 20px;
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        /* Navigation styling */
+        .nav {
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav a {
+            margin: 0 15px;
+            color: #00bcd4;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #0097a7;
+        }
+
+        /* Main container for team members */
+        .members-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between member containers */
+            padding: 20px;
+            background: rgba(26, 26, 26, 0.9);
+            border: 2px solid #00bcd4;
+            border-radius: 10px; 
+            width: 100%; /* Full width of the parent */
+        }
+
+        /* Individual member container */
+        .member {
+            background: rgba(26, 26, 26, 0.9); 
+            border: 2px solid #00bcd4; 
+            border-radius: 10px; 
+            padding: 20px; 
+            width: 250px; 
+            transition: transform 0.3s;
+            flex: 1 1 250px; /* Allow flexibility in size */
+            max-width: 300px; /* Set maximum width for larger screens */
+        }
+
+        .member:hover {
+            transform: scale(1.05);
+        }
+
+        /* Styled heading */
+        h1 {
+            font-size: 3rem; 
+            margin-bottom: 30px;
+            color: #00bcd4; 
+            text-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
+        }
+
+        /* Member name and role styling */
+        .member h2 {
+            font-size: 1.5rem; 
+            margin: 10px 0;
+            color: #00bcd4;
+        }
+
+        .member p {
+            font-size: 1rem; 
+            margin: 0; 
+            position: relative;
+            display: inline-block; /* Set to inline-block to position the sparkle */
+        }
+
+        /* Gold sparkle effect */
+        .sparkle-gold {
+            position: relative;
+            color: gold; /* Color for the sparkle effect */
+        }
+
+        .sparkle-gold::before {
+            content: '';
+            position: absolute;
+            left: -10px; /* Adjust to position sparkles */
+            top: -5px; /* Adjust to position sparkles */
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 20%, gold 20%, gold 30%, transparent 30%, transparent);
+            animation: sparkle-gold 1.5s infinite;
+            opacity: 0;
+            z-index: -1; /* Ensure the sparkle is behind the text */
+        }
+
+        @keyframes sparkle-gold {
+            0% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+        }
+
+        /* Purple sparkle effect */
+        .sparkle-purple {
+            position: relative;
+            color: purple; /* Color for Collaborator role */
+        }
+
+        .sparkle-purple::before {
+            content: '';
+            position: absolute;
+            left: -10px; /* Adjust to position sparkles */
+            top: -5px; /* Adjust to position sparkles */
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 20%, purple 20%, purple 30%, transparent 30%, transparent);
+            animation: sparkle-purple 1.5s infinite;
+            opacity: 0;
+            z-index: -1; /* Ensure the sparkle is behind the text */
+        }
+
+        @keyframes sparkle-purple {
+            0% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+        }
+
+        /* Highlight specific roles */
+        .role-lead {
+            font-weight: bold; /* Make it bold */
+        }
+
+        .role-colead {
+            font-weight: bold; /* Make it bold */
+        }
+
+        /* Footer styles */
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #00bcd4; 
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem; 
+            }
+
+            .member {
+                width: 90%; /* Full width for smaller screens */
+                max-width: 90%; /* Remove max width constraint */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem; 
+            }
+
+            .member {
+                width: 100%; /* Full width for mobile screens */
+                max-width: 100%; /* Remove max width constraint */
+            }
+
+            .member h2 {
+                font-size: 1.2rem; /* Adjust member name size */
+            }
+
+            .member p {
+                font-size: 0.9rem; /* Adjust role size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="team.html">Team</a>
+    </div>
+
+    <h1>Meet Our Team</h1>
+
+    <div class="team-container">
+        <div class="members-box">
+            <div class="member">
+                <h2>Araan</h2>
+                <p class="role-lead sparkle-gold">Role: Lead</p>
+            </div>
+            <div class="member">
+                <h2>Axiom</h2>
+                <p class="role-colead sparkle-gold">Role: Co-Lead</p>
+            </div>
+            <div class="member">
+                <h2>Mopizify</h2>
+                <p class="sparkle-purple">Role: Collaborator</p>
+            </div>
+            <div class="member">
+                <h2>TheBoys</h2>
+                <p class="sparkle-purple">Role: Collaborator</p>
+            </div>
+            <div class="member">
+                <h2>Hari</h2>
+                <p class="sparkle-purple">Role: Partner</p>
+            </div>
+            <div class="member">
+                <h2>Jay</h2>
+                <p class="sparkle-purple">Role: Collaborator</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with links -->
+    <footer>
+        Made with ❤️ by <a href="https://is-cod.in" target="_blank">is-cod.in</a> team
+    </footer>
+
+</body>
+</html>

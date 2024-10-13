@@ -24,13 +24,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        /* General styling */
         body, html {
             margin: 0;
             padding: 0;
             font-family: 'Silkscreen', cursive; 
-            background-color: #1a1a1a;
-            color: #eaeaea;
+            background: linear-gradient(135deg, #1f1f1f, #3b3b3b);
+            color: #f0f0f0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -41,39 +40,34 @@
             padding: 20px; 
         }
 
-        /* Light Theme */
         .light-theme body, .light-theme html {
-            background-color: #ffffff;
-            color: #1a1a1a;
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            color: #282c34;
         }
 
-        /* Container styling */
         .container {
             padding: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border: 2px solid #00bcd4; 
-            border-radius: 10px; 
-            background: rgba(26, 26, 26, 0.9); 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #61dafb; 
+            border-radius: 15px; 
+            background: rgba(40, 44, 52, 0.9); 
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .container:hover {
             transform: scale(1.02);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
         }
 
-        /* Styled heading */
         h1 {
             font-size: 3.5rem; 
             margin-bottom: 20px;
-            color: #00bcd4; 
-            position: relative;
-            display: inline-block;
-            text-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
+            color: #61dafb; 
+            text-shadow: 0 0 15px rgba(97, 218, 251, 0.5);
             animation: fadeIn 1s ease-in-out;
         }
 
@@ -82,39 +76,36 @@
             to { opacity: 1; }
         }
 
-        /* Button container to align buttons */
         .button-container {
             display: flex;
             justify-content: center;
             gap: 15px;
         }
 
-        /* Button styles */
         .button {
             padding: 12px 30px;
             font-size: 1rem;
-            background-color: #00bcd4; 
+            background: linear-gradient(90deg, #61dafb, #21a1f1);
             border: none;
             color: white;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
             border-radius: 5px; 
             text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
         }
 
         .button:hover {
-            background-color: #0097a7; 
+            background: linear-gradient(90deg, #21a1f1, #61dafb);
             transform: translateY(-2px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
-        /* Input field styles */
         .subdomain-input {
             margin: 20px 0;
             padding: 12px;
             font-size: 1rem;
-            border: 1px solid #00bcd4;
+            border: 1px solid #61dafb;
             border-radius: 5px;
             width: 250px;
             transition: border-color 0.3s, box-shadow 0.3s;
@@ -123,17 +114,16 @@
         .subdomain-input:focus {
             border-color: #0097a7;
             outline: none;
-            box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+            box-shadow: 0 0 5px rgba(97, 218, 251, 0.5);
         }
 
-        /* Footer styles */
         footer {
             margin-top: 20px;
             font-size: 0.9rem;
         }
 
         footer a {
-            color: #00bcd4; 
+            color: #61dafb; 
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -142,7 +132,7 @@
             text-decoration: underline;
             color: #0097a7;
         }
-        /* Navigation styling */
+
         .nav {
             margin-bottom: 20px;
             width: 100%;
@@ -151,7 +141,7 @@
 
         .nav a {
             margin: 0 15px;
-            color: #00bcd4;
+            color: #61dafb;
             text-decoration: none;
             font-size: 1.2rem;
             transition: color 0.3s;
@@ -161,7 +151,6 @@
             color: #0097a7;
         }
 
-        /* Media Queries for responsiveness */
         @media (max-width: 600px) {
             h1 {
                 font-size: 2.5rem;
@@ -190,7 +179,7 @@
                 <i class="fab fa-github icon"></i> Register with GitHub
             </button>
             
-            <button class="button discord-button" onclick="window.open('https://discord.gg/zEVFx2Vdq5', '_blank')">
+            <button class="button" onclick="window.open('https://discord.gg/zEVFx2Vdq5', '_blank')">
                 <i class="fab fa-discord icon"></i> Register with Discord
             </button>
         </div>
@@ -201,7 +190,6 @@
         <button class="button" onclick="redirectToSubdomain()">Claim Subdomain</button>
     </div>
 
-    
     <footer>
         Made with ❤️ by <a href="https://is-cod.in" target="_blank">is-cod.in</a> team
     </footer>
